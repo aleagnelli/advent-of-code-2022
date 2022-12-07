@@ -1,12 +1,12 @@
 class Day02Suite extends munit.FunSuite {
-  test("part 1 example") {
-    val actual = Day02.part1(
-      """
+  private val example = """
       |A Y
       |B X
       |C Z
       """.stripMargin.trim
-    )
+
+  test("part 1 example") {
+    val actual = Day02.part1(example)
     assertEquals(actual, 15)
   }
 
@@ -16,13 +16,7 @@ class Day02Suite extends munit.FunSuite {
   }
 
   test("part 2 example") {
-    val actual = Day02.part2(
-      """
-      |A Y
-      |B X
-      |C Z
-      """.stripMargin.trim
-    )
+    val actual = Day02.part2(example)
     assertEquals(actual, 12)
   }
 
