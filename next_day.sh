@@ -14,11 +14,11 @@ object Day${day} {
 
   def runPart1(): Int = part1(input)
 
-  def part1(s: String) = ???
+  def part1(input: String) = ???
 
   // def runPart2(): Int = part2(input)
 
-  // def part2(s: String) = ???
+  // def part2(input: String) = ???
 }
 EOF
 
@@ -26,8 +26,11 @@ touch "src/main/resources/day${day}.txt"
 
 cat <<EOF >"src/test/scala/Day${day}Suite.scala"
 class Day${day}Suite extends munit.FunSuite {
+  private val example = """
+  """.stripMargin.trim
+
   test("part 1 example") {
-    val actual = Day${day}.part1("")
+    val actual = Day${day}.part1(example)
     assertEquals(actual, 0)
   }
 
@@ -37,7 +40,7 @@ class Day${day}Suite extends munit.FunSuite {
   }
 
   // test("part 2 example") {
-  //   val actual = Day${day}.part2("")
+  //   val actual = Day${day}.part2(example)
   //   assertEquals(actual, 0)
   // }
 
